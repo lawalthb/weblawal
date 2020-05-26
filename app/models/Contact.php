@@ -10,8 +10,22 @@ class Contact extends Model
         'first_name',
         'last_name',
         'email',
+        'department_id',
         'city',
         'country',
         'job_title'       
     ];
+
+    public function Department(){
+
+
+       // return $this->belongsTo('App\models\Department');
+        return $this->belongsTo(Department::class);
+
+
+    }
+
+
+
+
 }

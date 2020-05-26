@@ -16,6 +16,16 @@
     @endif
       <form method="post" action="{{ route('contacts.store') }}">
           @csrf
+          <div class="form-group">  
+              <label for="first_name">Departmet to contact:</label>  
+              <select name="department" class="form-control">
+                <option value="">Choose department</option>
+                @foreach ($departments as $department)
+                <option value="{{ $department->id }}">{{ $department->name }} </option>
+                @endforeach    
+              </select>
+          </div>
+
           <div class="form-group">    
               <label for="first_name">First Name:</label>
               <input type="text" class="form-control" name="first_name"/>

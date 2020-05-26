@@ -23,6 +23,7 @@
           <td>ID</td>
           <td>Name</td>
           <td>Email</td>
+          <td>Dept.</td>
           <td>Job Title</td>
           <td>City</td>
           <td>Country</td>
@@ -35,6 +36,7 @@
             <td>{{$contact->id}}</td>
             <td>{{$contact->first_name}} {{$contact->last_name}}</td>
             <td>{{$contact->email}}</td>
+            <td>{{$contact->Department->name}}</td>
             <td>{{$contact->job_title}}</td>
             <td>{{$contact->city}}</td>
             <td>{{$contact->country}}</td>
